@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ItemListContainer />
+      <ItemListContainer tituloSaludo="Bienvenido a la tienda de Punto de Vista | Optica" />
     </div>
   )
 }

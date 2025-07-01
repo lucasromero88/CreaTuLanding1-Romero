@@ -1,5 +1,6 @@
-export const ItemListContainer = () => {
+import './ItemListContainer.css';
+export const ItemListContainer = ( {tituloSaludo} ) => {
   return (
-    <div></div>
+    <h2>{tituloSaludo}</h2>
   )
 }
