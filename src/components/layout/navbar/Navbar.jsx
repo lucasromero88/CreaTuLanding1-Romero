@@ -1,5 +1,5 @@
 import React from 'react'
-import { CartWidget } from '../cartWidget/CartWidget'
+import { CartWidget } from "../../common/cartWidget/CartWidget";
 import './Navbar.css'
 
 export const Navbar = () => {
@@ -36,7 +36,9 @@ export const Navbar = () => {
         </nav> */}
         <nav className="navbar navbar-expand-lg navbar-light shadow-sm px-4">
             <div className="container-fluid">
-
+                <figure className="logo">
+                    <a href="index.html"><img src="https://res.cloudinary.com/dtbbnfylm/image/upload/v1753049832/logo_lyrsw3.png" alt="Logo de óptica Punto de Vista"/></a>
+                </figure>
                 <button
                     className="navbar-toggler custom-toggler"
                     type="button"

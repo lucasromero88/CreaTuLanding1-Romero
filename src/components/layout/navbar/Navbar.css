@@ -18,3 +18,8 @@
     border-bottom-left-radius: 17px;
     height: 150px;
 }
+
+.logo img {
+  width: 100px;
+  height: 80px;
+}
