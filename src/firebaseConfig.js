@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAx6m-i0vXK1NvSroKi3RC_m0W6GRolzG0",
-  authDomain: "ecommerce-back-8b950.firebaseapp.com",
-  projectId: "ecommerce-back-8b950",
-  storageBucket: "ecommerce-back-8b950.firebasestorage.app",
-  messagingSenderId: "887594618018",
-  appId: "1:887594618018:web:93a92ebbf590434f2b5bfb"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECT,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESAGE,
+  appId: import.meta.env.VITE_APP,
 };
 
 // Initialize Firebase
