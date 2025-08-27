@@ -14,8 +14,8 @@
 
 .navbar {
     background-color: #004080;
-    border-bottom-right-radius: 17px;
-    border-bottom-left-radius: 17px;
+    /* border-bottom-right-radius: 17px; */
+    /* border-bottom-left-radius: 17px; */
     height: 150px;
 }
 

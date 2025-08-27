@@ -3,10 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import Contador from "../../common/contador/Contador";
+import { useCart } from "../../../context/CartContext";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
+  const { addToCart } = useCart();
 
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -61,7 +63,17 @@ const ItemDetailContainer = () => {
 
   const onAdd = (quantity) => {
     if (!product) return;
-    console.log(`Se agregaron ${quantity} unidades de ${product.name}.`);
+    // console.log(`Se agregaron ${quantity} unidades de ${product.name}.`);
+    // setItemAdded(true);
+    if (!product) return;
+      const item = {
+        id: product.id,
+        title: product.name ?? product.title ?? "(sin nombre)",
+        price: product.price ?? 0,
+        imageUrl: product.img ?? product.imageUrl ?? null,
+        stock: product.stock ?? 0,
+      };
+    addToCart(item, quantity);
     setItemAdded(true);
   };
 
@@ -93,7 +105,6 @@ const ItemDetailContainer = () => {
     <div className="detail-container">
       <h1>{product.name}</h1>
 
-      {/* Evita el warning de React cuando la URL está vacía */}
       {product.img && (
         <img
           src={product.img}

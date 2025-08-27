@@ -1,24 +1,3 @@
-// import "./productCard.css";
-// import { Link } from "react-router-dom";
-
-// const ProductCard = ({ item }) => {
-//   const { title, description, price, id, imageUrl} = item;
-//   return (
-//     <div className="cardClass">
-//       <Link to={`/item/${item.id}`} className="cardLinks">
-//         <img className="imagenes" src={imageUrl} alt={imageUrl} />
-//         <div className="card-content">
-//           <h1>{title}</h1>
-//           <h3>{price}</h3>
-//           <h3>{description}</h3>
-//         </div>
-//       </Link>
-//     </div>
-//   );
-// };
-
-// export default ProductCard;
-
 import "./productCard.css";
 import { Link } from "react-router-dom";
 
