@@ -13,6 +13,7 @@ const SLUG_TO_DB = {
 const ItemListContainer = () => {
   const params = useParams();
   const rawParam = (params.name ?? params.categoryId ?? "").trim().toLowerCase() || null;
+  
   const categoryValue = rawParam ? (SLUG_TO_DB[rawParam] ?? rawParam) : null;
 
   const [items, setItems] = useState([]);
